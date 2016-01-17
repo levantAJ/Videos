@@ -1,0 +1,6 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "3c2a9d45212a3e8e8b8200dc656e9403"
+build_time: [506359713, 359752000]
+inputs:
+  "/Users/tale/Me/VideosAssignment/VideosAssignment/AppDelegate.swift": [506359502, 0]
+  "/Users/tale/Me/VideosAssignment/VideosAssignment/ViewModel/View/ViewController.swift": [506359679, 0]
