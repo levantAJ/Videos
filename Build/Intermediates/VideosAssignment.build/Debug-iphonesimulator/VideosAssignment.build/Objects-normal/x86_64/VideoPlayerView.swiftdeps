@@ -1,0 +1,136 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "VideoPlayerView"
+provides-nominal:
+- "C16VideosAssignment15VideoPlayerView"
+provides-member:
+- ["C16VideosAssignment15VideoPlayerView", ""]
+provides-dynamic-lookup:
+- "player"
+- "fillMode"
+depends-top-level:
+- "String"
+- "UIView"
+- "VideoPlayerView"
+- "AVPlayer"
+depends-member:
+- ["PSs9AnyObject", "fillMode"]
+- ["PSs9AnyObject", "init"]
+- ["PSs9AnyObject", "player"]
+- ["PSs9AnyObject", ""]
+- ["PSs11CVarArgType", "fillMode"]
+- ["PSs11CVarArgType", "init"]
+- ["PSs11CVarArgType", "player"]
+- ["PSs11CVarArgType", ""]
+- ["PSs23CustomStringConvertible", "fillMode"]
+- ["PSs23CustomStringConvertible", "init"]
+- ["PSs23CustomStringConvertible", "player"]
+- ["PSs23CustomStringConvertible", ""]
+- ["PSs9Equatable", "fillMode"]
+- ["PSs9Equatable", "init"]
+- ["PSs9Equatable", "player"]
+- ["PSs9Equatable", ""]
+- ["PSs8Hashable", "fillMode"]
+- ["PSs8Hashable", "init"]
+- ["PSs8Hashable", "player"]
+- ["PSs8Hashable", ""]
+- ["PSo8NSCoding", "fillMode"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "player"]
+- ["PSo8NSCoding", ""]
+- ["CSo8NSObject", "AVPlayer"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "fillMode"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "player"]
+- ["PSo16NSObjectProtocol", "fillMode"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "player"]
+- ["PSo16NSObjectProtocol", ""]
+- ["PSo29UIAccessibilityIdentification", "fillMode"]
+- ["PSo29UIAccessibilityIdentification", "init"]
+- ["PSo29UIAccessibilityIdentification", "player"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- ["PSo12UIAppearance", "fillMode"]
+- ["PSo12UIAppearance", "init"]
+- ["PSo12UIAppearance", "player"]
+- ["PSo12UIAppearance", ""]
+- ["PSo21UIAppearanceContainer", "fillMode"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "player"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo17UICoordinateSpace", "fillMode"]
+- ["PSo17UICoordinateSpace", "init"]
+- ["PSo17UICoordinateSpace", "player"]
+- ["PSo17UICoordinateSpace", ""]
+- ["PSo13UIDynamicItem", "fillMode"]
+- ["PSo13UIDynamicItem", "init"]
+- ["PSo13UIDynamicItem", "player"]
+- ["PSo13UIDynamicItem", ""]
+- ["PSo18UIFocusEnvironment", "fillMode"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "player"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["CSo11UIResponder", "AVPlayer"]
+- ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "fillMode"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "player"]
+- ["PSo18UITraitEnvironment", "fillMode"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "player"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo6UIView", "AVPlayer"]
+- ["CSo6UIView", "String"]
+- ["CSo6UIView", "fillMode"]
+- ["CSo6UIView", "init"]
+- ["CSo6UIView", "player"]
+- ["CSo6UIView", ""]
+- ["C16VideosAssignment15VideoPlayerView", "AVPlayer"]
+- ["C16VideosAssignment15VideoPlayerView", "String"]
+- ["C16VideosAssignment15VideoPlayerView", "deinit"]
+- ["C16VideosAssignment15VideoPlayerView", "fillMode"]
+- ["C16VideosAssignment15VideoPlayerView", "init"]
+- ["C16VideosAssignment15VideoPlayerView", "player"]
+- ["PSs12_Reflectable", "fillMode"]
+- ["PSs12_Reflectable", "init"]
+- ["PSs12_Reflectable", "player"]
+- ["PSs12_Reflectable", ""]
+depends-nominal:
+- "PSs9AnyObject"
+- "PSs11CVarArgType"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- "PSs8Hashable"
+- "PSo8NSCoding"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "CSo11UIResponder"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- "C16VideosAssignment15VideoPlayerView"
+- "PSs12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Users/tale/Me/VideosAssignment/Build/Products/Debug-iphonesimulator/VIMVideoPlayer.framework/Headers/VIMVideoPlayerView.h"
+- "/Users/tale/Me/VideosAssignment/Build/Products/Debug-iphonesimulator/VIMVideoPlayer.framework/Headers/VIMVideoPlayer.h"
+- "/Users/tale/Me/VideosAssignment/Build/Products/Debug-iphonesimulator/VIMVideoPlayer.framework/Headers/VIMVideoPlayer-umbrella.h"
+- "/Users/tale/Me/VideosAssignment/Build/Products/Debug-iphonesimulator/VIMVideoPlayer.framework/Modules/module.modulemap"
+interface-hash: "0beba0740db0809065deee1bc46c31e8"

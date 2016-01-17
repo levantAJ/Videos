@@ -1,0 +1,70 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/tale/Me/VideosAssignment/Build/Products/Debug-iphonesimulator/Pods_VideosAssignment.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-VideosAssignment-umbrella.h",
+          'external-contents': "/Users/tale/Me/VideosAssignment/Pods/Target Support Files/Pods-VideosAssignment/Pods-VideosAssignment-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_VideosAssignment-Swift.h",
+          'external-contents': "/Users/tale/Me/VideosAssignment/Build/Products/Debug-iphonesimulator/Pods_VideosAssignment.framework/Headers/Pods_VideosAssignment-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/tale/Me/VideosAssignment/Build/Products/Debug-iphonesimulator/Pods_VideosAssignment.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/tale/Me/VideosAssignment/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-VideosAssignment.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/tale/Me/VideosAssignment/Build/Products/Debug-iphonesimulator/VIMVideoPlayer.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "VIMVideoPlayer-Swift.h",
+          'external-contents': "/Users/tale/Me/VideosAssignment/Build/Products/Debug-iphonesimulator/VIMVideoPlayer.framework/Headers/VIMVideoPlayer-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "VIMVideoPlayer-umbrella.h",
+          'external-contents': "/Users/tale/Me/VideosAssignment/Pods/Target Support Files/VIMVideoPlayer/VIMVideoPlayer-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "VIMVideoPlayer.h",
+          'external-contents': "/Users/tale/Me/VideosAssignment/Pods/VIMVideoPlayer/VIMVideoPlayer/VIMVideoPlayer.h"
+        },
+        {
+          'type': 'file',
+          'name': "VIMVideoPlayerView.h",
+          'external-contents': "/Users/tale/Me/VideosAssignment/Pods/VIMVideoPlayer/VIMVideoPlayer/VIMVideoPlayerView.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/tale/Me/VideosAssignment/Build/Products/Debug-iphonesimulator/VIMVideoPlayer.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/tale/Me/VideosAssignment/Build/Intermediates/Pods.build/Debug-iphonesimulator/VIMVideoPlayer.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

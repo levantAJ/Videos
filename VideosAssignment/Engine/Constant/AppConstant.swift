@@ -6,4 +6,10 @@
 //  Copyright © 2016 levantAJ. All rights reserved.
 //
 
-struct Constant {}
+import UIKit
+
+struct Constant {
+    struct Image {
+        static let Thumbnail = UIImage(named: "ic_place_loading")!
+    }
+}

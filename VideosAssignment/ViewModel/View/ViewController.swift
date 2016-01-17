@@ -26,6 +26,10 @@ final class ViewController: UIViewController {
         tableView.registerNib(UINib(nibName: Constant.VideoTableViewCell.ResueIdentifier, bundle: nil), forCellReuseIdentifier: Constant.VideoTableViewCell.ResueIdentifier)
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
+        tableView.estimatedRowHeight = 146
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.separatorStyle = .None
+        tableView.backgroundColor = UIColor.groupTableViewBackgroundColor()
     }
 }
 

@@ -9,15 +9,15 @@ provides-dynamic-lookup:
 - "window"
 - "application"
 depends-top-level:
-- "UIApplicationDelegate"
-- "UIApplication"
-- "Bool"
-- !private "BooleanLiteralType"
-- "UIWindow"
-- "AnyObject"
-- "AppDelegate"
-- "NSObject"
 - "UIResponder"
+- "UIApplicationDelegate"
+- "UIWindow"
+- "NSObject"
+- "AnyObject"
+- !private "BooleanLiteralType"
+- "AppDelegate"
+- "Bool"
+- "UIApplication"
 depends-member:
 - ["PSs9AnyObject", "application"]
 - ["PSs9AnyObject", "applicationDidBecomeActive"]
@@ -206,4 +206,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Users/tale/Me/VideosAssignment/Build/Products/Debug-iphonesimulator/VIMVideoPlayer.framework/Headers/VIMVideoPlayerView.h"
+- "/Users/tale/Me/VideosAssignment/Build/Products/Debug-iphonesimulator/VIMVideoPlayer.framework/Headers/VIMVideoPlayer.h"
+- "/Users/tale/Me/VideosAssignment/Build/Products/Debug-iphonesimulator/VIMVideoPlayer.framework/Headers/VIMVideoPlayer-umbrella.h"
+- "/Users/tale/Me/VideosAssignment/Build/Products/Debug-iphonesimulator/VIMVideoPlayer.framework/Modules/module.modulemap"
 interface-hash: "0cf55ceffe6aa56e40972ebe56982222"

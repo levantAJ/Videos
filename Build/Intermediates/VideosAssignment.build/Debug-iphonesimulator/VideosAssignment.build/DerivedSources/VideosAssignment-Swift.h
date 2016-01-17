@@ -102,17 +102,31 @@ SWIFT_CLASS("_TtC16VideosAssignment11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class MPMoviePlayerController;
+@class VIMVideoPlayerView;
 @class NSURL;
+@class UIImage;
+@class UIButton;
+@class UIView;
+@class UIImageView;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC16VideosAssignment18VideoTableViewCell")
 @interface VideoTableViewCell : UITableViewCell
-@property (nonatomic, strong) MPMoviePlayerController * __null_unspecified video;
+@property (nonatomic, weak) IBOutlet UIButton * __null_unspecified playButton;
+@property (nonatomic, weak) IBOutlet UIView * __null_unspecified wrapperView;
+@property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified thumbnailImageView;
+@property (nonatomic, strong) VIMVideoPlayerView * __null_unspecified videoPlayerView;
 - (void)awakeFromNib;
+- (void)layoutSubviews;
 - (void)configureWithURL:(NSURL * __nonnull)URL;
+- (void)generateThumbnailFromURL:(NSURL * __nonnull)URL completion:(void (^ __nonnull)(UIImage * __nonnull))completion;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface VideoTableViewCell (SWIFT_EXTENSION(VideosAssignment))
+- (IBAction)playButtonTapped:(id __nonnull)sender;
 @end
 
 @class UITableView;
