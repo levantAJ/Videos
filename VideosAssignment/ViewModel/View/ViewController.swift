@@ -23,6 +23,7 @@ final class ViewController: UIViewController {
     }
     
     private func setupTableView() {
+        tableView.registerNib(UINib(nibName: Constant.VideoTableViewCell.ResueIdentifier, bundle: nil), forCellReuseIdentifier: Constant.VideoTableViewCell.ResueIdentifier)
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
     }
@@ -34,8 +35,8 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Constant.VideoTableViewCell.ResueIdentifier, forIndexPath: indexPath)
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier(Constant.VideoTableViewCell.ResueIdentifier, forIndexPath: indexPath) as! VideoTableViewCell
+        cell.configureWithURL(videos[indexPath.row])
         return cell
     }
 }

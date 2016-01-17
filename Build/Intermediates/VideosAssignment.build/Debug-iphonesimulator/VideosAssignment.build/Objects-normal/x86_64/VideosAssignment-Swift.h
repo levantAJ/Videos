@@ -99,26 +99,22 @@ SWIFT_CLASS("_TtC16VideosAssignment11AppDelegate")
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 @property (nonatomic, strong) UIWindow * __nullable window;
 - (BOOL)application:(UIApplication * __nonnull)application didFinishLaunchingWithOptions:(NSDictionary * __nullable)launchOptions;
-- (void)applicationWillResignActive:(UIApplication * __nonnull)application;
-- (void)applicationDidEnterBackground:(UIApplication * __nonnull)application;
-- (void)applicationWillEnterForeground:(UIApplication * __nonnull)application;
-- (void)applicationDidBecomeActive:(UIApplication * __nonnull)application;
-- (void)applicationWillTerminate:(UIApplication * __nonnull)application;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class MPMoviePlayerController;
+@class NSURL;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC16VideosAssignment18VideoTableViewCell")
 @interface VideoTableViewCell : UITableViewCell
 @property (nonatomic, strong) MPMoviePlayerController * __null_unspecified video;
 - (void)awakeFromNib;
+- (void)configureWithURL:(NSURL * __nonnull)URL;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSURL;
 @class UITableView;
 @class NSBundle;
 
