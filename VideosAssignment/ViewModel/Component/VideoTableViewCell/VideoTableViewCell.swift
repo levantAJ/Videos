@@ -21,6 +21,7 @@ final class VideoTableViewCell: UITableViewCell {
         super.awakeFromNib()
         videoPlayerView = VIMVideoPlayerView()
         videoPlayerView.setVideoFillMode(AVLayerVideoGravityResizeAspectFill)
+        videoPlayerView.player.looping = false
         wrapperView.addSubview(videoPlayerView)
         selectionStyle = .None
     }
