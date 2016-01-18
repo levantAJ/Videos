@@ -28,6 +28,7 @@ final class VideoViewController: UIViewController {
     private func setupTableView() {
         tableView.registerNib(UINib(nibName: Constant.VideoTableViewCell.ResueIdentifier, bundle: nil), forCellReuseIdentifier: Constant.VideoTableViewCell.ResueIdentifier)
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 146
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -56,6 +57,13 @@ extension VideoViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier(Constant.VideoTableViewCell.ResueIdentifier, forIndexPath: indexPath) as! VideoTableViewCell
         cell.configureWithURL(videos[indexPath.row])
         return cell
+    }
+}
+
+extension VideoViewController: UITableViewDelegate {
+    func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        guard let cell = cell as? VideoTableViewCell where tableView.indexPathsForVisibleRows?.indexOf(indexPath) == nil else { return }
+        cell.pause()
     }
 }
 

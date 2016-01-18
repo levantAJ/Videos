@@ -32,24 +32,11 @@ final class VideoPlayerViewController: UIViewController {
         return .LightContent
     }
     
-    func triggerControl() {
-        if closeButton.alpha == 0 {
-            closeButton.hiddenWithAnimation(hidden: false)
-            NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "hideCloseButton", userInfo: nil, repeats: false)
-        } else {
-            closeButton.hiddenWithAnimation(hidden: true)
-        }
-    }
-    
     func playVideos(videos: [NSURL], videoPlayerAnimation: VideoPlayerAnimation = .None) {
         self.videos = videos
         self.videoPlayerAnimation = videoPlayerAnimation
         resetPlaying()
         playVideoPlayerView(firstVideoPlayerView)
-    }
-    
-    func hideCloseButton() {
-        closeButton.hiddenWithAnimation(hidden: true)
     }
     
     private func setupVideoPlayers() {
@@ -140,12 +127,27 @@ extension VideoPlayerViewController {
     @IBAction func closeButtonTapped(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: {
             self.resetPlaying()
+            self.firstVideoPlayerView.player.reset()
+            self.secondVideoPlayerView.player.reset()
         })
     }
     
     @IBAction func playButtonTapped(sender: AnyObject) {
         resetPlaying()
         playVideoPlayerView(firstVideoPlayerView)
+    }
+    
+    func hideCloseButton() {
+        closeButton.hiddenWithAnimation(hidden: true)
+    }
+    
+    func triggerControl() {
+        if closeButton.alpha == 0 {
+            closeButton.hiddenWithAnimation(hidden: false)
+            NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "hideCloseButton", userInfo: nil, repeats: false)
+        } else {
+            closeButton.hiddenWithAnimation(hidden: true)
+        }
     }
 }
 

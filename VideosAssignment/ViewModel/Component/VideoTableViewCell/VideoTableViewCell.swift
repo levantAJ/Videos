@@ -35,6 +35,11 @@ final class VideoTableViewCell: UITableViewCell {
     func configureWithURL(URL: NSURL) {
         videoPlayerView.player.setURL(URL)
     }
+    
+    func pause() {
+        videoPlayerView.player.pause()
+        playButton.hidden = false
+    }
 }
 
 //MARK: - Users interactions
