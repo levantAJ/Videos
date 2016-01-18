@@ -33,9 +33,6 @@ final class VideoTableViewCell: UITableViewCell {
     
     func configureWithURL(URL: NSURL) {
         videoPlayerView.player.setURL(URL)
-        AppUtils.generateThumbnailFromURL(URL, completion: { (image) -> Void in
-            self.thumbnailImageView.image = image
-        })
     }
 }
 

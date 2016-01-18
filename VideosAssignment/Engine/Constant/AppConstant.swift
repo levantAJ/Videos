@@ -11,5 +11,15 @@ import UIKit
 struct Constant {
     struct Image {
         static let Thumbnail = UIImage(named: "ic_place_loading")!
+        static let Play = UIImage(named: "play")!
     }
+}
+
+enum VideoPlayerAnimation {
+    case None
+    case Fade
+    case SlideToLeft
+    case SlideToRight
+    case SlideToTop
+    case SlideToBottom
 }

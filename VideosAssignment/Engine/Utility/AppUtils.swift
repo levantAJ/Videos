@@ -21,4 +21,9 @@ final class AppUtils {
             })
         })
     }
+    
+    class func viewController(screenName: String, storyboardName: String, bundle: NSBundle? = nil) -> UIViewController? {
+        let storyboard = UIStoryboard(name: storyboardName, bundle: bundle)
+        return storyboard.instantiateViewControllerWithIdentifier(screenName)
+    }
 }

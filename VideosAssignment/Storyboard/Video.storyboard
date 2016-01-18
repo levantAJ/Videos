@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Video View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VideosAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="VideoViewController" customModule="VideosAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,7 +24,7 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfk-XW-pTg">
                                 <rect key="frame" x="20" y="540" width="560" height="44"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.14901960784313725" green="0.65098039215686276" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Cnd-Lp-bCu"/>
                                 </constraints>
@@ -40,19 +40,20 @@
                             <constraint firstItem="Pfk-XW-pTg" firstAttribute="top" secondItem="cSK-VY-wiC" secondAttribute="bottom" constant="16" id="Gvr-OR-kYH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Pfk-XW-pTg" secondAttribute="bottom" constant="16" id="HIp-VJ-mtD"/>
                             <constraint firstItem="cSK-VY-wiC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HbK-CG-5Ed"/>
-                            <constraint firstItem="cSK-VY-wiC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="beU-c1-L8K"/>
                             <constraint firstAttribute="trailing" secondItem="cSK-VY-wiC" secondAttribute="trailing" id="di4-tp-tIR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Pfk-XW-pTg" secondAttribute="trailing" id="eEo-Kv-cMe"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Pfk-XW-pTg" secondAttribute="leading" id="eZP-wd-t9K"/>
+                            <constraint firstItem="cSK-VY-wiC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="leM-IC-VvG"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="playAllButtonBottomConstraint" destination="HIp-VJ-mtD" id="6MJ-bW-BhN"/>
                         <outlet property="tableView" destination="cSK-VY-wiC" id="GbJ-tF-1mV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="302" y="351"/>
+            <point key="canvasLocation" x="1114" y="351"/>
         </scene>
     </scenes>
 </document>

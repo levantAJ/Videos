@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xWI-7p-Hl7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Video Player View Controller-->
+        <scene sceneID="Mge-cx-1qp">
+            <objects>
+                <viewController storyboardIdentifier="VideoPlayerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xWI-7p-Hl7" customClass="VideoPlayerViewController" customModule="VideosAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DNp-G2-j4e"/>
+                        <viewControllerLayoutGuide type="bottom" id="rmn-Jt-Ucl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E07-Fk-sr1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="T4p-xH-f0I">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jss-KO-5hd">
+                                <rect key="frame" x="527" y="28" width="57" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="KPv-0o-2hb"/>
+                                    <constraint firstAttribute="height" constant="27" id="PJK-Qr-ho9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="xWI-7p-Hl7" eventType="touchUpInside" id="70k-U3-ncr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T4p-xH-f0I" firstAttribute="centerX" secondItem="E07-Fk-sr1" secondAttribute="centerX" id="Rxj-jh-Tkg"/>
+                            <constraint firstItem="T4p-xH-f0I" firstAttribute="centerY" secondItem="E07-Fk-sr1" secondAttribute="centerY" id="UJ1-Xb-vbo"/>
+                            <constraint firstAttribute="trailing" secondItem="Jss-KO-5hd" secondAttribute="trailing" constant="16" id="gHU-sb-bim"/>
+                            <constraint firstItem="Jss-KO-5hd" firstAttribute="top" secondItem="DNp-G2-j4e" secondAttribute="bottom" constant="8" id="xPv-TT-0aB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="Jss-KO-5hd" id="Y76-Ko-fB1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tkh-qf-FYp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="297"/>
+        </scene>
+    </scenes>
+</document>

@@ -15,23 +15,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="180.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_place_loading" translatesAutoresizingMaskIntoConstraints="NO" id="mUL-Va-sZ7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+                    </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHu-Mh-5Bz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="170" id="fP8-8q-sIV"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_place_loading" translatesAutoresizingMaskIntoConstraints="NO" id="mUL-Va-sZ7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
-                    </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoA-ID-CQb">
-                        <rect key="frame" x="138" y="63" width="44" height="44"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoA-ID-CQb">
+                        <rect key="frame" x="138.5" y="62.5" width="44" height="44"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="44" id="b27-uU-yOd"/>
                             <constraint firstAttribute="height" constant="44" id="zud-Mf-33l"/>
                         </constraints>
-                        <state key="normal" title="Play"/>
+                        <state key="normal" image="play"/>
                         <connections>
                             <action selector="playButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ky6-ll-eCY"/>
                         </connections>
@@ -62,5 +62,6 @@
     </objects>
     <resources>
         <image name="ic_place_loading" width="352" height="170"/>
+        <image name="play" width="77" height="77"/>
     </resources>
 </document>
