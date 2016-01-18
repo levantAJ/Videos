@@ -32,20 +32,8 @@ final class VideoTableViewCell: UITableViewCell {
     
     func configureWithURL(URL: NSURL) {
         videoPlayerView.player.setURL(URL)
-        generateThumbnailFromURL(URL, completion: { (image) -> Void in
+        AppUtils.generateThumbnailFromURL(URL, completion: { (image) -> Void in
             self.thumbnailImageView.image = image
-        })
-    }
-    
-    func generateThumbnailFromURL(URL: NSURL, completion: (UIImage) -> Void) {
-        let asset = AVURLAsset(URL: URL)
-        let image = AVAssetImageGenerator(asset: asset)
-        let time = CMTime(value: 1, timescale: 1)
-        image.generateCGImagesAsynchronouslyForTimes([NSValue(CMTime: time)], completionHandler: { (requestedTime, cgImage, actualTime, result, error) -> Void in
-            guard let cgImage = cgImage else { return }
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                completion(UIImage(CGImage: cgImage))
-            })
         })
     }
 }

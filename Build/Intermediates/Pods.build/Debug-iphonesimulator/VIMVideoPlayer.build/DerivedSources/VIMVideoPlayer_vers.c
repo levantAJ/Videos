@@ -1,1 +1,0 @@
- const unsigned char VIMVideoPlayerVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:VIMVideoPlayer  PROJECT:Pods-1" "\n"; const double VIMVideoPlayerVersionNumber __attribute__ ((used)) = (double)1.;

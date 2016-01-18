@@ -18,12 +18,15 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHu-Mh-5Bz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="170" id="fP8-8q-sIV"/>
+                        </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_place_loading" translatesAutoresizingMaskIntoConstraints="NO" id="mUL-Va-sZ7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoA-ID-CQb">
-                        <rect key="frame" x="138" y="85" width="44" height="44"/>
+                        <rect key="frame" x="138" y="63" width="44" height="44"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="44" id="b27-uU-yOd"/>
                             <constraint firstAttribute="height" constant="44" id="zud-Mf-33l"/>
@@ -36,17 +39,16 @@
                 </subviews>
                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 <constraints>
-                    <constraint firstItem="AoA-ID-CQb" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="0Sa-Mh-3jn"/>
-                    <constraint firstItem="RHu-Mh-5Bz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="1gH-vO-w6K"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="RHu-Mh-5Bz" secondAttribute="trailing" constant="-8" id="NQr-tH-qkg"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="RHu-Mh-5Bz" secondAttribute="bottom" id="QXc-pY-t8m"/>
-                    <constraint firstItem="mUL-Va-sZ7" firstAttribute="top" secondItem="RHu-Mh-5Bz" secondAttribute="top" id="Qkw-Do-DS2"/>
-                    <constraint firstItem="mUL-Va-sZ7" firstAttribute="bottom" secondItem="RHu-Mh-5Bz" secondAttribute="bottom" id="YFH-9b-0h7"/>
-                    <constraint firstItem="mUL-Va-sZ7" firstAttribute="leading" secondItem="RHu-Mh-5Bz" secondAttribute="leading" id="aoR-WC-cUx"/>
-                    <constraint firstItem="RHu-Mh-5Bz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="fDb-ET-CFR"/>
-                    <constraint firstItem="AoA-ID-CQb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="77" id="oy2-7R-lbq"/>
-                    <constraint firstItem="mUL-Va-sZ7" firstAttribute="trailing" secondItem="RHu-Mh-5Bz" secondAttribute="trailing" id="pY2-Iz-7PM"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="AoA-ID-CQb" secondAttribute="bottom" constant="77" id="x17-uu-5ju"/>
+                    <constraint firstItem="mUL-Va-sZ7" firstAttribute="top" secondItem="RHu-Mh-5Bz" secondAttribute="top" id="E90-bS-X1E"/>
+                    <constraint firstItem="mUL-Va-sZ7" firstAttribute="trailing" secondItem="RHu-Mh-5Bz" secondAttribute="trailing" id="LX9-sR-PWj"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="RHu-Mh-5Bz" secondAttribute="trailing" constant="-8" id="MyA-fh-spC"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="RHu-Mh-5Bz" secondAttribute="bottom" constant="2.5" id="a1n-pb-Dhu"/>
+                    <constraint firstItem="mUL-Va-sZ7" firstAttribute="leading" secondItem="RHu-Mh-5Bz" secondAttribute="leading" id="bZa-Ku-xkR"/>
+                    <constraint firstItem="AoA-ID-CQb" firstAttribute="centerY" secondItem="RHu-Mh-5Bz" secondAttribute="centerY" id="hO9-UW-K5i"/>
+                    <constraint firstItem="AoA-ID-CQb" firstAttribute="centerX" secondItem="RHu-Mh-5Bz" secondAttribute="centerX" id="kU0-3b-qRW"/>
+                    <constraint firstItem="RHu-Mh-5Bz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="lNy-wj-S7s"/>
+                    <constraint firstItem="mUL-Va-sZ7" firstAttribute="bottom" secondItem="RHu-Mh-5Bz" secondAttribute="bottom" id="mJK-zH-Rn3"/>
+                    <constraint firstItem="RHu-Mh-5Bz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="oqu-ou-Qjf"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>

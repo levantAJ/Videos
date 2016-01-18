@@ -1,8 +1,0 @@
-version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
-options: "29f037a5b6628bfc92955f7115021eb2"
-build_time: [506367935, 885614000]
-inputs:
-  "/Users/tale/Me/VideosAssignment/VideosAssignment/ViewModel/Component/VideoTableViewCell/VideoTableViewCell.swift": [506367935, 0]
-  "/Users/tale/Me/VideosAssignment/VideosAssignment/AppDelegate.swift": [506361192, 0]
-  "/Users/tale/Me/VideosAssignment/VideosAssignment/Engine/Constant/AppConstant.swift": [506362786, 0]
-  "/Users/tale/Me/VideosAssignment/VideosAssignment/ViewModel/View/ViewController.swift": [506363195, 0]

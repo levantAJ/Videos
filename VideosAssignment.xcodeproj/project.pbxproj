@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D6637781C4CF82F009CBBCC /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6637771C4CF82F009CBBCC /* AppUtils.swift */; };
 		3DC5F8F21C4BE9CE00918C7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F8F11C4BE9CE00918C7A /* AppDelegate.swift */; };
 		3DC5F9071C4BE9CE00918C7A /* VideosAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F9061C4BE9CE00918C7A /* VideosAssignmentTests.swift */; };
 		3DC5F9121C4BE9CE00918C7A /* VideosAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F9111C4BE9CE00918C7A /* VideosAssignmentUITests.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		2E4B4505CEC266F83E4A0AD5 /* Pods-VideosAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideosAssignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideosAssignment/Pods-VideosAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		3D6637771C4CF82F009CBBCC /* AppUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		3DC5F8EE1C4BE9CE00918C7A /* VideosAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideosAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC5F8F11C4BE9CE00918C7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DC5F8FD1C4BE9CE00918C7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D6637761C4CF824009CBBCC /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3D6637771C4CF82F009CBBCC /* AppUtils.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		3DC5F8E51C4BE9CE00918C7A = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +151,7 @@
 		3DC5F91F1C4BEA5900918C7A /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				3D6637761C4CF824009CBBCC /* Utility */,
 				3DC5F9321C4BED9F00918C7A /* Constant */,
 			);
 			path = Engine;
@@ -405,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D6637781C4CF82F009CBBCC /* AppUtils.swift in Sources */,
 				3DC5F92C1C4BEA5900918C7A /* ViewController.swift in Sources */,
 				3DC5F8F21C4BE9CE00918C7A /* AppDelegate.swift in Sources */,
 				3DC5F9301C4BEB3900918C7A /* VideoTableViewCell.swift in Sources */,
