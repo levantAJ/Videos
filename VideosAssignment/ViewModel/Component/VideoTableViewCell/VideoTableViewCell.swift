@@ -22,6 +22,7 @@ final class VideoTableViewCell: UITableViewCell {
         videoPlayerView = VIMVideoPlayerView()
         videoPlayerView.setVideoFillMode(AVLayerVideoGravityResizeAspectFill)
         videoPlayerView.player.looping = false
+        videoPlayerView.delegate = self
         wrapperView.addSubview(videoPlayerView)
         selectionStyle = .None
     }
@@ -43,6 +44,14 @@ extension VideoTableViewCell {
         videoPlayerView.player.play()
         playButton.hidden = true
         thumbnailImageView.hidden = true
+    }
+}
+
+//MARK: -
+
+extension VideoTableViewCell: VIMVideoPlayerViewDelegate {
+    func videoPlayerViewDidReachEnd(videoPlayerView: VIMVideoPlayerView!) {
+        playButton.hidden = false
     }
 }
 
