@@ -12,6 +12,7 @@ import VIMVideoPlayer
 final class VideoPlayerViewController: UIViewController {
     
     @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
     
     var videos = [NSURL]()
     var videoPlayerAnimation = VideoPlayerAnimation.None
@@ -22,13 +23,16 @@ final class VideoPlayerViewController: UIViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupVideoPlayers()
-        closeButton.layer.cornerRadius = 4
-        closeButton.layer.borderColor = UIColor.whiteColor().CGColor
-        closeButton.layer.borderWidth = 0.5
+        closeButton.addBorder()
         closeButton.clipsToBounds = true
+        setNeedsStatusBarAppearanceUpdate()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
+    func triggerControl() {
         if closeButton.alpha == 0 {
             closeButton.hiddenWithAnimation(hidden: false)
             NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "hideCloseButton", userInfo: nil, repeats: false)
@@ -59,6 +63,8 @@ final class VideoPlayerViewController: UIViewController {
         videoPlayerView.setVideoFillMode(AVLayerVideoGravityResizeAspectFill)
         videoPlayerView.player.looping = false
         videoPlayerView.delegate = self
+        videoPlayerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "triggerControl"))
+        videoPlayerView.userInteractionEnabled = true
         videoPlayerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         videoPlayerView.hidden = true
         view.addSubview(videoPlayerView)
@@ -136,6 +142,11 @@ extension VideoPlayerViewController {
             self.resetPlaying()
         })
     }
+    
+    @IBAction func playButtonTapped(sender: AnyObject) {
+        resetPlaying()
+        playVideoPlayerView(firstVideoPlayerView)
+    }
 }
 
 //MARK: -VIMVideoPlayerViewDelegate
@@ -149,8 +160,10 @@ extension VideoPlayerViewController: VIMVideoPlayerViewDelegate {
                 playVideoPlayerView(firstVideoPlayerView)
             }
         } else {
-            closeButton.hiddenWithAnimation(hidden: false)
             view.bringSubviewToFront(closeButton)
+            view.bringSubviewToFront(playButton)
+            closeButton.hiddenWithAnimation(hidden: false)
+            playButton.hiddenWithAnimation(hidden: false)
         }
     }
 }

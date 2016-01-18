@@ -32,17 +32,32 @@
                                     <action selector="closeButtonTapped:" destination="xWI-7p-Hl7" eventType="touchUpInside" id="70k-U3-ncr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncO-fh-ocK">
+                                <rect key="frame" x="272" y="271.5" width="57" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="Kgf-Yo-d7a"/>
+                                    <constraint firstAttribute="height" constant="57" id="uvp-ql-z6n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playButtonTapped:" destination="xWI-7p-Hl7" eventType="touchUpInside" id="lK8-RM-Nyg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="T4p-xH-f0I" firstAttribute="centerX" secondItem="E07-Fk-sr1" secondAttribute="centerX" id="Rxj-jh-Tkg"/>
                             <constraint firstItem="T4p-xH-f0I" firstAttribute="centerY" secondItem="E07-Fk-sr1" secondAttribute="centerY" id="UJ1-Xb-vbo"/>
                             <constraint firstAttribute="trailing" secondItem="Jss-KO-5hd" secondAttribute="trailing" constant="16" id="gHU-sb-bim"/>
+                            <constraint firstItem="ncO-fh-ocK" firstAttribute="centerX" secondItem="E07-Fk-sr1" secondAttribute="centerX" id="laS-zJ-7LV"/>
+                            <constraint firstItem="ncO-fh-ocK" firstAttribute="centerY" secondItem="E07-Fk-sr1" secondAttribute="centerY" id="rIG-SH-6MH"/>
                             <constraint firstItem="Jss-KO-5hd" firstAttribute="top" secondItem="DNp-G2-j4e" secondAttribute="bottom" constant="8" id="xPv-TT-0aB"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="closeButton" destination="Jss-KO-5hd" id="Y76-Ko-fB1"/>
+                        <outlet property="playButton" destination="ncO-fh-ocK" id="2Il-29-VPX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tkh-qf-FYp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -50,4 +65,7 @@
             <point key="canvasLocation" x="258" y="297"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play" width="77" height="77"/>
+    </resources>
 </document>
