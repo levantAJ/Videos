@@ -168,4 +168,8 @@ extension VideoPlayerViewController: VIMVideoPlayerViewDelegate {
             playButton.hiddenWithAnimation(hidden: false)
         }
     }
+    
+    func videoPlayerView(videoPlayerView: VIMVideoPlayerView!, didFailWithError error: NSError!) {
+        showAlertWithTitle(error.localizedDescription)
+    }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D6637781C4CF82F009CBBCC /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6637771C4CF82F009CBBCC /* AppUtils.swift */; };
+		3DBD3FBD1C4E2CB800571414 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBD3FBC1C4E2CB800571414 /* UIViewController.swift */; };
 		3DC56F661C4D43A300968355 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC56F651C4D43A300968355 /* VideoViewController.swift */; };
 		3DC56F681C4D43E600968355 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC56F671C4D43E600968355 /* VideoPlayerViewController.swift */; };
 		3DC56F6A1C4D449400968355 /* VideoPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC56F691C4D449400968355 /* VideoPlayer.storyboard */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		2E4B4505CEC266F83E4A0AD5 /* Pods-VideosAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideosAssignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideosAssignment/Pods-VideosAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		3D6637771C4CF82F009CBBCC /* AppUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
+		3DBD3FBC1C4E2CB800571414 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		3DC56F651C4D43A300968355 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		3DC56F671C4D43E600968355 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		3DC56F691C4D449400968355 /* VideoPlayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoPlayer.storyboard; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				3DC56F6C1C4D4C3E00968355 /* UIView.swift */,
+				3DBD3FBC1C4E2CB800571414 /* UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				3DC56F6D1C4D4C3E00968355 /* UIView.swift in Sources */,
 				3DC56F681C4D43E600968355 /* VideoPlayerViewController.swift in Sources */,
 				3DC56F661C4D43A300968355 /* VideoViewController.swift in Sources */,
+				3DBD3FBD1C4E2CB800571414 /* UIViewController.swift in Sources */,
 				3DC5F9341C4BEDB100918C7A /* AppConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
