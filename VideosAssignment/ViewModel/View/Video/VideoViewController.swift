@@ -41,7 +41,7 @@ final class VideoViewController: UIViewController {
 
 extension VideoViewController {
     @IBAction func playAllButtonTapped(sender: AnyObject) {
-        videoPlayerViewController.playVideos(videos, videoPlayerAnimation: .None) // Configure animation here
+        videoPlayerViewController.playVideos(videos, videoPlayerAnimation: .Fade) // Configure animation here
         presentViewController(videoPlayerViewController, animated: true, completion: nil)
     }
 }

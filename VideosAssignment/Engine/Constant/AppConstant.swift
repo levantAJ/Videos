@@ -22,4 +22,17 @@ enum VideoPlayerAnimation {
     case SlideToRight
     case SlideToTop
     case SlideToBottom
+    
+    func duration() -> Double {
+        switch self {
+        case .None:
+            return 0
+        case .Fade:
+            return 0.35
+        case .SlideToLeft, .SlideToRight:
+            return 0.5
+        case .SlideToBottom, .SlideToTop:
+            return 0.7
+        }
+    }
 }

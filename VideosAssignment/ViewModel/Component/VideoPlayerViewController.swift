@@ -83,7 +83,7 @@ final class VideoPlayerViewController: UIViewController {
     
     private func animationVidePlayerView(videoPlayerView: VIMVideoPlayerView) {
         if currentVideoIndex != 0 {
-            var shouldAnimated = false
+            let beyondVideoPlayerView = videoPlayerView == firstVideoPlayerView ? secondVideoPlayerView : firstVideoPlayerView
             switch videoPlayerAnimation {
             case .None:
                 videoPlayerView.frame = CGRect(origin: CGPoint.zero, size: videoPlayerView.frame.size)
@@ -91,28 +91,38 @@ final class VideoPlayerViewController: UIViewController {
             case .Fade:
                 videoPlayerView.frame = CGRect(origin: CGPoint.zero, size: videoPlayerView.frame.size)
                 videoPlayerView.alpha = 0
-                UIView.animateWithDuration(0.25, animations: {
+                UIView.animateWithDuration(videoPlayerAnimation.duration(), animations: {
                     videoPlayerView.alpha = 1
                     }, completion: { _ in
                         videoPlayerView.hidden = false
                     })
             case .SlideToLeft:
                 videoPlayerView.frame = CGRect(origin: CGPoint(x: videoPlayerView.frame.width, y: videoPlayerView.frame.minY), size: videoPlayerView.frame.size)
-                shouldAnimated = true
+                videoPlayerView.hidden = false
+                UIView.animateWithDuration(videoPlayerAnimation.duration(), animations: {
+                    videoPlayerView.frame = CGRect(origin: CGPoint.zero, size: videoPlayerView.frame.size)
+                    beyondVideoPlayerView.frame = CGRect(origin: CGPoint(x: -beyondVideoPlayerView.frame.width, y: beyondVideoPlayerView.frame.minY), size: beyondVideoPlayerView.frame.size)
+                })
             case .SlideToRight:
                 videoPlayerView.frame = CGRect(origin: CGPoint(x: -videoPlayerView.frame.width, y: videoPlayerView.frame.minY), size: videoPlayerView.frame.size)
-                shouldAnimated = true
+                videoPlayerView.hidden = false
+                UIView.animateWithDuration(videoPlayerAnimation.duration(), animations: {
+                    videoPlayerView.frame = CGRect(origin: CGPoint.zero, size: videoPlayerView.frame.size)
+                    beyondVideoPlayerView.frame = CGRect(origin: CGPoint(x: beyondVideoPlayerView.frame.width, y: beyondVideoPlayerView.frame.minY), size: beyondVideoPlayerView.frame.size)
+                })
             case .SlideToTop:
                 videoPlayerView.frame = CGRect(origin: CGPoint(x: 0, y: videoPlayerView.frame.maxX), size: videoPlayerView.frame.size)
-                shouldAnimated = true
+                videoPlayerView.hidden = false
+                UIView.animateWithDuration(videoPlayerAnimation.duration(), animations: {
+                    videoPlayerView.frame = CGRect(origin: CGPoint.zero, size: videoPlayerView.frame.size)
+                    beyondVideoPlayerView.frame = CGRect(origin: CGPoint(x: beyondVideoPlayerView.frame.minX, y: -beyondVideoPlayerView.frame.height), size: beyondVideoPlayerView.frame.size)
+                })
             case .SlideToBottom:
                 videoPlayerView.frame = CGRect(origin: CGPoint(x: 0, y: -videoPlayerView.frame.height), size: videoPlayerView.frame.size)
-                shouldAnimated = true
-            }
-            if shouldAnimated {
                 videoPlayerView.hidden = false
-                UIView.animateWithDuration(0.5, animations: {
+                UIView.animateWithDuration(videoPlayerAnimation.duration(), animations: {
                     videoPlayerView.frame = CGRect(origin: CGPoint.zero, size: videoPlayerView.frame.size)
+                    beyondVideoPlayerView.frame = CGRect(origin: CGPoint(x: beyondVideoPlayerView.frame.minX, y: beyondVideoPlayerView.frame.height), size: beyondVideoPlayerView.frame.size)
                 })
             }
         } else {
