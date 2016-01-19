@@ -27,6 +27,8 @@ If you create `3` or `more than`, it will be inscrease the device's memories, th
 
 As you know, if we using `MPMoviePlayerController` we just play **only one video** at a time, so that impossible in the project, because: When we need to customise the animations or for our features it will make flicker (black flicker) when play next video
 
+https://github.com/vimeo/VIMVideoPlayer
+
 ### Animations:
 I create a simple animation: `VideoPlayerAnimation`.
 
