@@ -43,7 +43,7 @@ I think we should add new button in Video playing screen (the second screen) as 
 
 ### Project Structure:
 - ViewModule: Every module contains View, ViewModel & anything relates for front end.
-  - Component: is view what they will be share between multiple screen
+  - Component: Is view what they will be share between multiple screen
   - View: Represent for a screen
 - Resource: Can contains Images, Sounds, Layout config file, etc.
 - Storyboard: Put all storyboards at here.
