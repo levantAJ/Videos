@@ -25,8 +25,11 @@
                             <constraint firstAttribute="height" constant="170" id="fP8-8q-sIV"/>
                         </constraints>
                     </view>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qZe-r5-cg2">
+                        <rect key="frame" x="150" y="75" width="20" height="20"/>
+                    </activityIndicatorView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoA-ID-CQb">
-                        <rect key="frame" x="138.5" y="62.5" width="44" height="44"/>
+                        <rect key="frame" x="138" y="63" width="44" height="44"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="44" id="b27-uU-yOd"/>
                             <constraint firstAttribute="height" constant="44" id="zud-Mf-33l"/>
@@ -36,12 +39,21 @@
                             <action selector="playButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ky6-ll-eCY"/>
                         </connections>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdA-45-0aK">
+                        <rect key="frame" x="0.0" y="170" width="320" height="10.5"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
                 </subviews>
-                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
+                    <constraint firstItem="FdA-45-0aK" firstAttribute="top" secondItem="RHu-Mh-5Bz" secondAttribute="bottom" id="3e2-g8-PPF"/>
+                    <constraint firstItem="qZe-r5-cg2" firstAttribute="centerX" secondItem="RHu-Mh-5Bz" secondAttribute="centerX" id="Bjo-OV-uve"/>
                     <constraint firstItem="mUL-Va-sZ7" firstAttribute="top" secondItem="RHu-Mh-5Bz" secondAttribute="top" id="E90-bS-X1E"/>
                     <constraint firstItem="mUL-Va-sZ7" firstAttribute="trailing" secondItem="RHu-Mh-5Bz" secondAttribute="trailing" id="LX9-sR-PWj"/>
+                    <constraint firstItem="FdA-45-0aK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LZD-NE-JYy"/>
                     <constraint firstAttribute="trailingMargin" secondItem="RHu-Mh-5Bz" secondAttribute="trailing" constant="-8" id="MyA-fh-spC"/>
+                    <constraint firstAttribute="trailing" secondItem="FdA-45-0aK" secondAttribute="trailing" id="Q9W-G2-yCQ"/>
+                    <constraint firstAttribute="bottom" secondItem="FdA-45-0aK" secondAttribute="bottom" id="R4X-Iu-ch8"/>
                     <constraint firstAttribute="bottomMargin" secondItem="RHu-Mh-5Bz" secondAttribute="bottom" constant="2.5" id="a1n-pb-Dhu"/>
                     <constraint firstItem="mUL-Va-sZ7" firstAttribute="leading" secondItem="RHu-Mh-5Bz" secondAttribute="leading" id="bZa-Ku-xkR"/>
                     <constraint firstItem="AoA-ID-CQb" firstAttribute="centerY" secondItem="RHu-Mh-5Bz" secondAttribute="centerY" id="hO9-UW-K5i"/>
@@ -49,10 +61,12 @@
                     <constraint firstItem="RHu-Mh-5Bz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="lNy-wj-S7s"/>
                     <constraint firstItem="mUL-Va-sZ7" firstAttribute="bottom" secondItem="RHu-Mh-5Bz" secondAttribute="bottom" id="mJK-zH-Rn3"/>
                     <constraint firstItem="RHu-Mh-5Bz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="oqu-ou-Qjf"/>
+                    <constraint firstItem="qZe-r5-cg2" firstAttribute="centerY" secondItem="RHu-Mh-5Bz" secondAttribute="centerY" id="p2L-PJ-Fep"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="loadingView" destination="qZe-r5-cg2" id="dbl-Xr-e4q"/>
                 <outlet property="playButton" destination="AoA-ID-CQb" id="Krv-aI-D7s"/>
                 <outlet property="thumbnailImageView" destination="mUL-Va-sZ7" id="D8x-3O-8Tt"/>
                 <outlet property="wrapperView" destination="RHu-Mh-5Bz" id="p5a-V5-dKA"/>

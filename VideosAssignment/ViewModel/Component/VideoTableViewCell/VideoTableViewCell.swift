@@ -15,7 +15,9 @@ final class VideoTableViewCell: UITableViewCell {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var wrapperView: UIView!
     @IBOutlet weak var thumbnailImageView: UIImageView!
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
     var videoPlayerView: VIMVideoPlayerView!
+    var videoReadyToPlay = false
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,7 +50,9 @@ extension VideoTableViewCell {
     @IBAction func playButtonTapped(sender: AnyObject) {
         videoPlayerView.player.play()
         playButton.hidden = true
-        thumbnailImageView.hidden = true
+        if !videoReadyToPlay {
+            loadingView.startAnimating()
+        }
     }
 }
 
@@ -57,6 +61,13 @@ extension VideoTableViewCell {
 extension VideoTableViewCell: VIMVideoPlayerViewDelegate {
     func videoPlayerViewDidReachEnd(videoPlayerView: VIMVideoPlayerView!) {
         playButton.hidden = false
+        loadingView.stopAnimating()
+    }
+    
+    func videoPlayerViewIsReadyToPlayVideo(videoPlayerView: VIMVideoPlayerView!) {
+        videoReadyToPlay = true
+        loadingView.stopAnimating()
+        thumbnailImageView.hidden = true
     }
 }
 
