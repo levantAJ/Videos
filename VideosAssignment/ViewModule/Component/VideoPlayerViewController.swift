@@ -65,7 +65,7 @@ final class VideoPlayerViewController: UIViewController {
     }
     
     private func playVideoPlayerView(videoPlayerView: VIMVideoPlayerView) {
-        animationVidePlayerView(videoPlayerView)
+        animationVideoPlayerView(videoPlayerView)
         videoPlayerView.player.play()
         view.bringSubviewToFront(videoPlayerView)
         view.bringSubviewToFront(closeButton)
@@ -86,7 +86,7 @@ final class VideoPlayerViewController: UIViewController {
         firstVideoPlayerView.player.setURL(videos[currentVideoIndex])
     }
     
-    private func animationVidePlayerView(videoPlayerView: VIMVideoPlayerView) {
+    func animationVideoPlayerView(videoPlayerView: VIMVideoPlayerView) {
         if currentVideoIndex != 0 {
             let beyondVideoPlayerView = videoPlayerView == firstVideoPlayerView ? secondVideoPlayerView : firstVideoPlayerView
             switch videoPlayerAnimation {
