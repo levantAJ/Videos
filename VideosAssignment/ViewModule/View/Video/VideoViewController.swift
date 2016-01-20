@@ -35,7 +35,7 @@ final class VideoViewController: UIViewController {
 
 extension VideoViewController {
     @IBAction func playAllButtonTapped(sender: AnyObject) {
-        let videoPlayerViewController = VideoPlayerViewController.standardVideoPlayerViewController(videos, videoPlayerAnimation: .Fade)
+        let videoPlayerViewController = VideoPlayerViewController.standardVideoPlayerViewController(videos, videoPlayerAnimation: .None)
         videoPlayerViewController.playVideos()
         presentViewController(videoPlayerViewController, animated: true, completion: nil)
     }
