@@ -1,23 +1,23 @@
 //
-//  VideoTableViewCell.swift
+//  VideoCollectionViewCell.swift
 //  VideosAssignment
 //
-//  Created by Le Tai on 1/17/16.
+//  Created by Le Tai on 1/20/16.
 //  Copyright © 2016 levantAJ. All rights reserved.
 //
 
 import UIKit
 import VIMVideoPlayer
 
-final class VideoTableViewCell: UITableViewCell {
-    
+class VideoCollectionViewCell: UICollectionViewCell {
+
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var wrapperView: UIView!
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var loadingView: UIActivityIndicatorView!
     var videoPlayerView: VIMVideoPlayerView!
     var videoReadyToPlay = false
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         videoPlayerView = VIMVideoPlayerView()
@@ -25,7 +25,6 @@ final class VideoTableViewCell: UITableViewCell {
         videoPlayerView.player.looping = false
         videoPlayerView.delegate = self
         wrapperView.addSubview(videoPlayerView)
-        selectionStyle = .None
     }
     
     override func layoutSubviews() {
@@ -41,11 +40,15 @@ final class VideoTableViewCell: UITableViewCell {
         videoPlayerView.player.pause()
         playButton.hidden = false
     }
+    
+    class func width() -> CGFloat {
+        return AppUtils.isPad() ? 50 : AppUtils.screenSize().width
+    }
 }
 
 //MARK: - Users interactions
 
-extension VideoTableViewCell {
+extension VideoCollectionViewCell {
     @IBAction func playButtonTapped(sender: AnyObject) {
         videoPlayerView.player.play()
         playButton.hidden = true
@@ -57,7 +60,7 @@ extension VideoTableViewCell {
 
 //MARK: - VIMVideoPlayerViewDelegate
 
-extension VideoTableViewCell: VIMVideoPlayerViewDelegate {
+extension VideoCollectionViewCell: VIMVideoPlayerViewDelegate {
     func videoPlayerViewDidReachEnd(videoPlayerView: VIMVideoPlayerView!) {
         playButton.hidden = false
         loadingView.stopAnimating()
@@ -71,7 +74,8 @@ extension VideoTableViewCell: VIMVideoPlayerViewDelegate {
 }
 
 extension Constant {
-    struct VideoTableViewCell {
-        static let ResueIdentifier = "VideoTableViewCell"
+    struct VideoCollectionViewCell {
+        static let ResueIdentifier = "VideoCollectionViewCell"
+        static let DefaultHeight = CGFloat(170)
     }
 }

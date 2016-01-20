@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoCollectionViewCell" id="gTV-IL-0wX" customClass="VideoCollectionViewCell" customModule="VideosAssignment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_place_loading" translatesAutoresizingMaskIntoConstraints="NO" id="G0e-Ua-xZz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l34-zM-IBZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="170" id="wAQ-EF-E2w"/>
+                        </constraints>
+                    </view>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lQQ-pr-fXk">
+                        <rect key="frame" x="150" y="75" width="20" height="20"/>
+                    </activityIndicatorView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDY-Av-igZ">
+                        <rect key="frame" x="138" y="63" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="JYs-ro-51o"/>
+                            <constraint firstAttribute="width" constant="44" id="MXy-tZ-GQ8"/>
+                        </constraints>
+                        <state key="normal" image="play"/>
+                        <connections>
+                            <action selector="playButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="8LT-td-9SH"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="G0e-Ua-xZz" firstAttribute="bottom" secondItem="l34-zM-IBZ" secondAttribute="bottom" id="2ao-S1-IcS"/>
+                <constraint firstAttribute="trailing" secondItem="l34-zM-IBZ" secondAttribute="trailing" id="6p2-Ay-uAl"/>
+                <constraint firstItem="G0e-Ua-xZz" firstAttribute="trailing" secondItem="l34-zM-IBZ" secondAttribute="trailing" id="J9b-sI-GCd"/>
+                <constraint firstAttribute="bottom" secondItem="l34-zM-IBZ" secondAttribute="bottom" id="JGJ-91-uch"/>
+                <constraint firstItem="G0e-Ua-xZz" firstAttribute="leading" secondItem="l34-zM-IBZ" secondAttribute="leading" id="MrU-u6-NOH"/>
+                <constraint firstItem="EDY-Av-igZ" firstAttribute="centerY" secondItem="l34-zM-IBZ" secondAttribute="centerY" id="Usv-bR-4XR"/>
+                <constraint firstItem="G0e-Ua-xZz" firstAttribute="top" secondItem="l34-zM-IBZ" secondAttribute="top" id="aaZ-J8-Pqk"/>
+                <constraint firstItem="EDY-Av-igZ" firstAttribute="centerX" secondItem="l34-zM-IBZ" secondAttribute="centerX" id="e3Z-Zh-jME"/>
+                <constraint firstItem="lQQ-pr-fXk" firstAttribute="centerY" secondItem="l34-zM-IBZ" secondAttribute="centerY" id="iax-Ml-4iX"/>
+                <constraint firstItem="l34-zM-IBZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kOs-th-zhc"/>
+                <constraint firstItem="lQQ-pr-fXk" firstAttribute="centerX" secondItem="l34-zM-IBZ" secondAttribute="centerX" id="kVB-dX-6UK"/>
+                <constraint firstItem="l34-zM-IBZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pEJ-6q-iMJ"/>
+            </constraints>
+            <size key="customSize" width="320" height="170"/>
+            <connections>
+                <outlet property="loadingView" destination="lQQ-pr-fXk" id="zZX-X2-2C7"/>
+                <outlet property="playButton" destination="EDY-Av-igZ" id="0xN-IK-JRd"/>
+                <outlet property="thumbnailImageView" destination="G0e-Ua-xZz" id="TeV-lX-R0r"/>
+                <outlet property="wrapperView" destination="l34-zM-IBZ" id="ydU-ee-iVi"/>
+            </connections>
+            <point key="canvasLocation" x="302" y="294"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_place_loading" width="352" height="170"/>
+        <image name="play" width="77" height="77"/>
+    </resources>
+</document>

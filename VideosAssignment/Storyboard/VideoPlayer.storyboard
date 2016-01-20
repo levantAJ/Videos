@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="T4p-xH-f0I" firstAttribute="centerX" secondItem="E07-Fk-sr1" secondAttribute="centerX" id="Rxj-jh-Tkg"/>
                             <constraint firstItem="T4p-xH-f0I" firstAttribute="centerY" secondItem="E07-Fk-sr1" secondAttribute="centerY" id="UJ1-Xb-vbo"/>

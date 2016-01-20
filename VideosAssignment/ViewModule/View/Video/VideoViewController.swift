@@ -12,17 +12,11 @@ final class VideoViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var playAllButtonBottomConstraint: NSLayoutConstraint!
-    var videos = [
-        NSURL(string: "http://media.snowballnow.com/video/upload/v1451206914/lcgbutfkqbkhvrfdurrp.mp4")!,
-        NSURL(string: "http://media.snowballnow.com/video/upload/v1450752299/deff3bxsmpsrow4i40e0.mp4")!,
-        NSURL(string: "http://media.snowballnow.com/video/upload/v1450787135/poareeehaxfqhcyavnnl.mp4")!
-    ]
-    var videoPlayerViewController: VideoPlayerViewController!
+    lazy var videos = AppUtils.temporaryVideos()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        videoPlayerViewController = AppUtils.viewController("VideoPlayerViewController", storyboardName: "VideoPlayer") as! VideoPlayerViewController
     }
     
     private func setupTableView() {
@@ -41,7 +35,8 @@ final class VideoViewController: UIViewController {
 
 extension VideoViewController {
     @IBAction func playAllButtonTapped(sender: AnyObject) {
-        videoPlayerViewController.playVideos(videos, videoPlayerAnimation: .Fade) //TODO: Configure animation here
+        let videoPlayerViewController = VideoPlayerViewController.standardVideoPlayerViewController(videos, videoPlayerAnimation: .Fade)
+        videoPlayerViewController.playVideos()
         presentViewController(videoPlayerViewController, animated: true, completion: nil)
     }
 }

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3D6637781C4CF82F009CBBCC /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6637771C4CF82F009CBBCC /* AppUtils.swift */; };
+		3D7885A21C4FC0BE004170C9 /* VideoWithCollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7885A11C4FC0BE004170C9 /* VideoWithCollectionView.storyboard */; };
+		3D7885A51C4FC175004170C9 /* VideoWithCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7885A41C4FC175004170C9 /* VideoWithCollectionViewController.swift */; };
+		3D7885A91C4FC483004170C9 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7885A71C4FC483004170C9 /* VideoCollectionViewCell.swift */; };
+		3D7885AA1C4FC483004170C9 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D7885A81C4FC483004170C9 /* VideoCollectionViewCell.xib */; };
 		3DBD3FBD1C4E2CB800571414 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBD3FBC1C4E2CB800571414 /* UIViewController.swift */; };
 		3DC56F6A1C4D449400968355 /* VideoPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC56F691C4D449400968355 /* VideoPlayer.storyboard */; };
 		3DC56F6D1C4D4C3E00968355 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC56F6C1C4D4C3E00968355 /* UIView.swift */; };
@@ -45,6 +49,10 @@
 /* Begin PBXFileReference section */
 		2E4B4505CEC266F83E4A0AD5 /* Pods-VideosAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideosAssignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideosAssignment/Pods-VideosAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		3D6637771C4CF82F009CBBCC /* AppUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
+		3D7885A11C4FC0BE004170C9 /* VideoWithCollectionView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoWithCollectionView.storyboard; sourceTree = "<group>"; };
+		3D7885A41C4FC175004170C9 /* VideoWithCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoWithCollectionViewController.swift; sourceTree = "<group>"; };
+		3D7885A71C4FC483004170C9 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		3D7885A81C4FC483004170C9 /* VideoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCollectionViewCell.xib; sourceTree = "<group>"; };
 		3DBD3FBC1C4E2CB800571414 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		3DC56F691C4D449400968355 /* VideoPlayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoPlayer.storyboard; sourceTree = "<group>"; };
 		3DC56F6C1C4D4C3E00968355 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -101,6 +109,23 @@
 				3D6637771C4CF82F009CBBCC /* AppUtils.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		3D7885A31C4FC164004170C9 /* VideoWithCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				3D7885A41C4FC175004170C9 /* VideoWithCollectionViewController.swift */,
+			);
+			path = VideoWithCollectionView;
+			sourceTree = "<group>";
+		};
+		3D7885A61C4FC46B004170C9 /* VideoCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3D7885A71C4FC483004170C9 /* VideoCollectionViewCell.swift */,
+				3D7885A81C4FC483004170C9 /* VideoCollectionViewCell.xib */,
+			);
+			path = VideoCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		3DC56F6B1C4D4C3500968355 /* Extension */ = {
@@ -189,6 +214,7 @@
 				3DC5F9231C4BEA5900918C7A /* LaunchScreen.storyboard */,
 				3DC5F9241C4BEA5900918C7A /* Video.storyboard */,
 				3DC56F691C4D449400968355 /* VideoPlayer.storyboard */,
+				3D7885A11C4FC0BE004170C9 /* VideoWithCollectionView.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -213,6 +239,7 @@
 		3DE2699C1C4E3B63003CD9BB /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				3D7885A61C4FC46B004170C9 /* VideoCollectionViewCell */,
 				3DE2699E1C4E3B63003CD9BB /* VideoTableViewCell */,
 				3DE2699D1C4E3B63003CD9BB /* VideoPlayerViewController.swift */,
 			);
@@ -231,6 +258,7 @@
 		3DE269A11C4E3B63003CD9BB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3D7885A31C4FC164004170C9 /* VideoWithCollectionView */,
 				3DE269A21C4E3B63003CD9BB /* Video */,
 			);
 			path = View;
@@ -369,8 +397,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DC5F92B1C4BEA5900918C7A /* Video.storyboard in Resources */,
+				3D7885A21C4FC0BE004170C9 /* VideoWithCollectionView.storyboard in Resources */,
 				3DC5F9291C4BEA5900918C7A /* Assets.xcassets in Resources */,
 				3DC5F92A1C4BEA5900918C7A /* LaunchScreen.storyboard in Resources */,
+				3D7885AA1C4FC483004170C9 /* VideoCollectionViewCell.xib in Resources */,
 				3DE269A61C4E3B63003CD9BB /* VideoTableViewCell.xib in Resources */,
 				3DC56F6A1C4D449400968355 /* VideoPlayer.storyboard in Resources */,
 			);
@@ -449,9 +479,11 @@
 				3DC5F8F21C4BE9CE00918C7A /* AppDelegate.swift in Sources */,
 				3DE269A71C4E3B63003CD9BB /* VideoViewController.swift in Sources */,
 				3DE269A51C4E3B63003CD9BB /* VideoTableViewCell.swift in Sources */,
+				3D7885A51C4FC175004170C9 /* VideoWithCollectionViewController.swift in Sources */,
 				3DC56F6D1C4D4C3E00968355 /* UIView.swift in Sources */,
 				3DE269A41C4E3B63003CD9BB /* VideoPlayerViewController.swift in Sources */,
 				3DBD3FBD1C4E2CB800571414 /* UIViewController.swift in Sources */,
+				3D7885A91C4FC483004170C9 /* VideoCollectionViewCell.swift in Sources */,
 				3DC5F9341C4BEDB100918C7A /* AppConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

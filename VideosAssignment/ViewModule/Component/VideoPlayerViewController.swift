@@ -32,9 +32,14 @@ final class VideoPlayerViewController: UIViewController {
         return .LightContent
     }
     
-    func playVideos(videos: [NSURL], videoPlayerAnimation: VideoPlayerAnimation = .None) {
-        self.videos = videos
-        self.videoPlayerAnimation = videoPlayerAnimation
+    class func standardVideoPlayerViewController(videoURLs: [NSURL], videoPlayerAnimation: VideoPlayerAnimation = .None) -> VideoPlayerViewController {
+        let videosVC = AppUtils.viewController("VideoPlayerViewController", storyboardName: "VideoPlayer") as! VideoPlayerViewController
+        videosVC.videos = videoURLs
+        videosVC.videoPlayerAnimation = videoPlayerAnimation
+        return videosVC
+    }
+    
+    func playVideos() {
         resetPlaying()
         playVideoPlayerView(firstVideoPlayerView)
     }
